@@ -850,26 +850,9 @@ factories:
      - crush_coarse
      - shave_snow
      - repair_grinding_mill
-  waxer:
+  copper_workshop:
     type: FCC
-    name: Waxer
-    citadelBreakReduction: 1.0
-    setupcost:
-      copper_block:
-        material: COPPER_BLOCK
-        amount: 128
-      honeycomb:
-        material: HONEYCOMB
-        amount: 32
-    recipes:
-     - wax_copper_block
-     - wax_exposed_copper
-     - wax_weathered_copper
-     - wax_oxidized_copper
-     - repair_waxer
-  weatherer:
-    type: FCC
-    name: Weatherer
+    name: Copper Workshop
     citadelBreakReduction: 1.0
     setupcost:
       copper_block:
@@ -884,11 +867,18 @@ factories:
       oxidized_copper:
         material: OXIDIZED_COPPER
         amount: 64
+      honeycomb:
+        material: HONEYCOMB
+        amount: 32
     recipes:
+     - wax_copper_block
+     - wax_exposed_copper
+     - wax_weathered_copper
+     - wax_oxidized_copper
      - weather_copper_block
      - weather_exposed_copper
      - weather_weathered_copper
-     - repair_weatherer
+     - repair_copper_workshop
 #RECIPES
 recipes:
   smelt_stone:
@@ -6256,18 +6246,6 @@ recipes:
       waxed_oxidized_copper:
         material: WAXED_OXIDIZED_COPPER
         amount: 64
-  repair_waxer:
-    production_time: 4s
-    name: Repair Factory
-    type: REPAIR
-    input:
-      copper_block:
-        material: COPPER_BLOCK
-        amount: 64
-      honeycomb:
-        material: HONEYCOMB
-        amount: 4
-    health_gained: 10000
   weather_copper_block:
     production_time: 4s
     name: Weather Copper Block
@@ -6322,7 +6300,7 @@ recipes:
       bucket:
         material: BUCKET
         amount: 1
-  repair_weatherer:
+  repair_copper_workshop:
     production_time: 4s
     name: Repair Factory
     type: REPAIR
@@ -6338,6 +6316,9 @@ recipes:
         amount: 16
       oxidized_copper:
         material: OXIDIZED_COPPER
+        amount: 16
+      honeycomb:
+        material: HONEYCOMB
         amount: 16
     health_gained: 10000
   bind_books:
