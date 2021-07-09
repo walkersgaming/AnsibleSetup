@@ -204,17 +204,28 @@ drops:
          amount: 1
       minY: 1
       maxY: 256
-      chance: 0.015
+      chance: 0.011
       minAmount: 1
       maxAmount: 4
       transformIfAble: true
       biomes:
          MESA:
-            chance: 0.01
+            chance: 0.0075
          MESA_ROCK:
-            chance: 0.01
+            chance: 0.0075
          MESA_CLEAR_ROCK:
-            chance: 0.01
+            chance: 0.0075
+   copper_ore_transform:
+      package:
+      -  ==: org.bukkit.inventory.ItemStack
+         type: COPPER_ORE
+         amount: 1
+      minY: 1
+      maxY: 70
+      chance: 0.0035
+      minAmount: 1
+      maxAmount: 4
+      transformIfAble: true
    gold_ore_transform:
       package:
       -  ==: org.bukkit.inventory.ItemStack
@@ -222,7 +233,7 @@ drops:
          amount: 1
       minY: 1
       maxY: 70
-      chance: 0.0035
+      chance: 0.0025
       minAmount: 1
       maxAmount: 4
       transformIfAble: true
