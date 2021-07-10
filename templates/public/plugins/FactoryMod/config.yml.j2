@@ -225,9 +225,10 @@ factories:
         amount: 64
     recipes:
      - smelt_coal_ore
-     - smelt_iron_ore
+     - smelt_raw_copper
+     - smelt_raw_iron
      - smelt_diamond_ore
-     - smelt_gold_ore
+     - smelt_raw_gold
      - smelt_redstone_ore
      - smelt_lapis_ore
      - make_refractor
@@ -241,9 +242,10 @@ factories:
     recipes:
      - adv_smelt_ancient_debris
      - smelt_coal_ore
-     - smelt_iron_ore
+     - smelt_raw_copper
+     - smelt_raw_iron
      - smelt_diamond_ore
-     - adv_smelt_gold_ore
+     - adv_smelt_raw_gold
      - adv_smelt_redstone_ore
      - adv_smelt_lapis_ore
      - make_refractor
@@ -1075,18 +1077,30 @@ recipes:
       coal:
         material: COAL
         amount: 256
-  smelt_iron_ore:
+  smelt_raw_copper:
     production_time: 4s
-    name: Smelt Iron Ore
+    name: Smelt Raw Copper
     type: PRODUCTION
     input:
-      iron_ore:
-        material: IRON_ORE
+      raw_copper:
+        material: RAW_COPPER
+        amount: 64
+    output:
+      copper:
+        material: COPPER_INGOT
+        amount: 96
+  smelt_raw_iron:
+    production_time: 4s
+    name: Smelt Raw Iron
+    type: PRODUCTION
+    input:
+      raw_iron:
+        material: RAW_IRON
         amount: 64
     output:
       iron:
         material: IRON_INGOT
-        amount: 96
+        amount: 80
   smelt_diamond_ore:
     production_time: 4s
     name: Smelt Diamond Ore
@@ -1099,30 +1113,30 @@ recipes:
       diamond:
         material: DIAMOND
         amount: 48
-  smelt_gold_ore:
+  smelt_raw_gold:
     production_time: 4s
-    name: Smelt Gold Ore
+    name: Smelt Raw Gold
     type: PRODUCTION
     input:
-      gold_ore:
-        material: GOLD_ORE
-        amount: 32
-    output:
-      gold:
-        material: GOLD_INGOT
-        amount: 48
-  adv_smelt_gold_ore:
-    production_time: 4s
-    name: Advanced Smelt Gold Ore
-    type: PRODUCTION
-    input:
-      gold_ore:
-        material: GOLD_ORE
-        amount: 32
-    output:
-      gold:
-        material: GOLD_INGOT
+      raw_gold:
+        material: RAW_GOLD
         amount: 64
+    output:
+      gold:
+        material: GOLD_INGOT
+        amount: 80
+  adv_smelt_raw_gold:
+    production_time: 4s
+    name: Advanced Smelt Raw Gold
+    type: PRODUCTION
+    input:
+      raw_gold:
+        material: RAW_GOLD
+        amount: 64
+    output:
+      gold:
+        material: GOLD_INGOT
+        amount: 112
   smelt_redstone_ore:
     production_time: 4s
     name: Smelt Redstone Ore
